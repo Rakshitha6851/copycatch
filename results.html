@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Similarity Results</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <h2>Similarity Groups</h2>
+    <div id="results">
+        {% if results %}
+            <table>
+                <tr><th>Similarity Group</th><th>Files</th><th>Similarity (%)</th><th>Note</th></tr>
+                {% for group in results %}
+                    <tr>
+                        <td>{{ group.group }}</td>
+                        <td>{{ group.files }}</td>
+                        <td>{{ group.similarity }}</td>
+                        <td>{{ group.note }}</td>
+                    </tr>
+                {% endfor %}
+            </table>
+        {% else %}
+            <p>No similar files found.</p>
+        {% endif %}
+    </div>
+</body>
+</html>

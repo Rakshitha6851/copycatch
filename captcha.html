@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Copy Catch</title>
+  <link rel="stylesheet" href="/static/style.css">
+  <style>
+    /* Background animation: soft pastel gradient */
+    @keyframes lightBgAnimation {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+
+    body {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(270deg, #f9f9f9, #e0f7fa, #f1f8e9, #fffde7);
+      background-size: 600% 600%;
+      animation: lightBgAnimation 20s ease infinite;
+    }
+
+    button {
+      padding: 15px 40px;
+      font-size: 1.25rem;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      background: linear-gradient(135deg, #81d4fa, #4fc3f7);
+      color: white;
+      box-shadow: 0 8px 15px rgba(79, 195, 247, 0.4);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+      user-select: none;
+    }
+
+    button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 20px rgba(79, 195, 247, 0.6);
+    }
+
+    button:active {
+      transform: translateY(-1px);
+      box-shadow: 0 6px 10px rgba(79, 195, 247, 0.3);
+    }
+  </style>
+</head>
+<body>
+  <h1 style="font-size:4rem; font-weight:900; margin-bottom:30px; color:#4fc3f7;">COPY CATCH 🔍</h1>
+  <h2 style="text-align:center; color:#4bbdf3;">Handwritten Assignment Similarity Detection</h2>
+
+  <div style="max-width:500px; margin:40px auto; background:rgba(170, 251, 247, 0.85); padding:30px; border-radius:16px; box-shadow:0 2px 16px rgba(106,17,203,0.15); text-align:center;">
+    <p style="font-size:1.2em; color:#333;">
+      Welcome to COPYCATCH! This web app helps you detect similarity in handwritten assignment PDFs.
+      Upload your reference and student files to get started.
+    </p>
+  </div>
+
+  <a href="/upload"><button>Click Here</button></a>
+</body>
+</html>
